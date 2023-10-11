@@ -1,5 +1,5 @@
 import os
-from PIL import Image
+# from PIL import Image
 
 profiles_dir = "content/profiles"
 readme_path = "README.md"
