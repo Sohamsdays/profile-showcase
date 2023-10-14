@@ -1,8 +1,8 @@
 import os
 from PIL import Image
 
-profiles_dir = "content/profiles"
-readme_path = "README.md"
+profiles_dir = "../../content/profiles"
+readme_path = "../../README.md"
 profiles = []
 
 for filename in os.listdir(profiles_dir):
