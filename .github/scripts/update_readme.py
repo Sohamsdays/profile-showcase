@@ -16,8 +16,13 @@ for filename in os.listdir(profiles_dir):
                 print(f"Warning: File {filename} doesn't match the expected format.Skipping...")
                 continue
             try:
+                
                 name = lines[1].split(":")[1].strip().replace("'", "")
-                image = lines[2].split(":")[1].strip().replace("'", "")
+                image = lines[2].split(":")[1].strip().replace("'", "")                
+                location = lines[3].strip().split(":")[1].strip().replace("'","")
+                bio = lines[4].strip().split(":")[1].strip().replace("'","")
+                institution = lines[5].strip().split(":")[1].strip().replace("'","")
+                organisation = lines[6].strip().split(":")[1].strip().replace("'","")
                 
                 # Resizing the image to a smaller version
                 im = Image.open(f"static/images/{image}")
@@ -25,7 +30,7 @@ for filename in os.listdir(profiles_dir):
                 im.save(f"static/images/{image}", "JPEG")
                 
                 bio = lines[4].split(":")[1].strip().replace("'", "")
-                profiles.append((name, image, bio))
+                profiles.append((name, image,location, bio,institution,organisation))
             except IndexError:
                 print(f"Warning: File {filename} doesn't match the expected format. Skipping...")
 
@@ -37,7 +42,7 @@ end_placeholder = "## Happy Hacking! 🚀\n"
 profile_strings = []
 
 for name, image, bio in profiles:
-    profile_md = f"![{name}](static/images/{image})\n\n**{name}**\n\n{bio}\n\n---\n\n"
+    profile_md = f"![{name}](static/images/{image})\n\n**{name}**\n\n{bio}\n\n**{institution}**\n\n{organisation}\n\n{location}\n\n---\n\n"
     profile_strings.append(profile_md)
 
 new_content = readme_content.split(start_placeholder)[0] + start_placeholder + "\n".join(profile_strings) + end_placeholder
