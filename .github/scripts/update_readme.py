@@ -41,7 +41,7 @@ start_placeholder = "## Contributors:\n\n"
 end_placeholder = "## Happy Hacking! 🚀\n"
 profile_strings = []
 
-for name, image, bio in profiles:
+for name, image,location, bio,institution,organisation in profiles:
     profile_md = f"![{name}](static/images/{image})\n\n**{name}**\n\n{bio}\n\n**{institution}**\n\n{organisation}\n\n{location}\n\n---\n\n"
     profile_strings.append(profile_md)
 
