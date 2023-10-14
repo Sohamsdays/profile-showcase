@@ -34,7 +34,7 @@ for filename in os.listdir(profiles_dir):
                 # im.save(f"static/images/{image}", "JPEG")
                 
                 bio = lines[4].split(":")[1].strip().replace("'", "")
-                profiles.append((name, "resized_" + image, bio))
+                profiles.append((name, "resized_" + im, bio))
             except IndexError:
                 print(f"Warning: File {filename} doesn't match the expected format. Skipping...")
 
