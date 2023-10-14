@@ -1,28 +1,16 @@
 ## Contributors:
 
-![Sayak Mukherjee](static/images/Sayak.jpeg)
-
-**Sayak Mukherjee**
-
-Engineering Student and a passionate devloper
-
----
-
-
 ![Rahul Baskey](static/images/rahulbaskey.jpg)
 
 **Rahul Baskey**
 
 Passionate Developer and Community Moderator.
 
----
+** Sister Nivedita University **
 
+ bong.dev
 
-![Jagpreet Singh Khurana](static/images/jskhurana.png)
-
-**Jagpreet Singh Khurana**
-
-Engineering Student and a passionate devloper
+Salt Lake, Kolkata
 
 ---
 
@@ -33,6 +21,12 @@ Engineering Student and a passionate devloper
 
 Frontend and things around it
 
+**Manipal Institute of Technology, Manipal**
+
+QuantZent , Prev at Accenture
+
+Kolkata, West Bengal
+
 ---
 
 
@@ -42,14 +36,11 @@ Frontend and things around it
 
 Passionate Python Developer and Analyst
 
----
+**University Of Calcutta,Salt Lake**
 
+Hoichoi.tech
 
-![AM](static/images/alokemajumder.JPG)
-
-**AM**
-
-Mentor @ bong.dev
+Vip Nagar, Kolkata
 
 ---
 
