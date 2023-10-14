@@ -30,5 +30,7 @@ jobs:
         run: |
           python .github/scripts/update_readme.py
           git add README.md
+          git config --local user.email "sohamsdays@github.com"
+          git config --local user.name "Soham De"
           git commit -m "Update README.md"
           git push
