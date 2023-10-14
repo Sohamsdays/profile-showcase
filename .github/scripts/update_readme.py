@@ -50,4 +50,4 @@ for name, image, bio in profiles:
     profile_strings.append(profile_md)
 new_content = readme_content.split(start_placeholder)[0] + start_placeholder + "\n".join(profile_strings) + end_placeholder
 with open(readme_path, 'w', encoding="utf-8") as f:
-    f.write(start_placeholder)
+    f.write(new_content)
