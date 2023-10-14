@@ -23,7 +23,7 @@ for filename in os.listdir(profiles_dir):
                 im = im.resize((250, 250))
                 # im.thumbnail((250, 250))
                 # im.save(f"static/images/{image}", "PNG")
-                resized_img_path =   os.path.join(f"static/images/",image)
+                resized_img_path =   os.path.join(f"static/images/","Yolo"+image)
                 print(resized_img_path)
                 im.save(resized_img_path, "JPEG")
                 
