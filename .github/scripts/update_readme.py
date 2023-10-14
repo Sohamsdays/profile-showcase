@@ -13,7 +13,7 @@ for filename in os.listdir(profiles_dir):
                 print(f"Warning: File {filename} has fewer lines than expected. Skipping...")
                 continue
             if len(lines[0]) > 9:  # line 0 should not contain any information it's only for markup
-                print(f"Warning: File {filename} doesn't match the expected format. Skipping...")
+                print(f"Warning: File {filename} doesn't match the expected format.Skipping...")
                 continue
             try:
                 name = lines[1].split(":")[1].strip().replace("'", "")
