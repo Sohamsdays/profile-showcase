@@ -18,14 +18,23 @@ for filename in os.listdir(profiles_dir):
             try:
                 name = lines[1].split(":")[1].strip().replace("'", "")
                 image = lines[2].split(":")[1].strip().replace("'", "")
+
+                img_path = os.path.join("static/images",image)
+                # Resizing the image to a smaller version
+                im = Image.open(img_path)
+                im = im.resize((250, 250))
+                # im.thumbnail((250, 250))
+                # im.save(f"static/images/{image}", "PNG")
+                resized_img_path = os.path.join("static/images", "resized_" + image)
+                im.save(resized_img_path, "JPEG")
                 
                 # Resizing the image to a smaller version
-                im = Image.open(f"static/images/{image}")
-                im.thumbnail((250, 250))
-                im.save(f"static/images/{image}", "JPEG")
+                # im = Image.open(f"static/images/{image}")
+                # im.thumbnail((250, 250))
+                # im.save(f"static/images/{image}", "JPEG")
                 
                 bio = lines[4].split(":")[1].strip().replace("'", "")
-                profiles.append((name, image, bio))
+                profiles.append((name, "resized_" + image, bio))
             except IndexError:
                 print(f"Warning: File {filename} doesn't match the expected format. Skipping...")
 
